@@ -1,0 +1,29 @@
+<launch> 
+  <arg name="gnss_x" default="47.2872848511" />
+  <arg name="gnss_y" default="-30.9518527985" />
+  <arg name="gnss_yaw" default="1.6" />
+  <arg name="longitude" default="118.5669877" />
+  <arg name="latitude" default="24.9701139" />
+
+  <arg name="initialPubGate" default="1.8" />
+
+  <node pkg="tf" type="static_transform_publisher" name="map_to_gnss" args="$(arg gnss_x) $(arg gnss_y) 0.0 $(arg gnss_yaw) 0 0 /map /gnss 10" />
+  <node pkg="tf" type="static_transform_publisher" name="baselink_to_imu" args="0.0 0.0 0.458 0 0 0 /base_link /imu 10" />
+  
+  <rosparam file="$(find localization)/fusion/config/params.yaml" command="load" />
+
+
+  <!--node pkg="localization" type="nmea2tfpose" name="nmea2tfpose" output="screen">
+  	 <param name="longitude" value="$(arg longitude)"/>
+ 	 <param name="latitude" value="$(arg latitude)"/>
+ 	 <param name="useGPSInImu" value="false"/>
+ 	 <param name="pose_topic" type="string" value="ndt_pose"/> 
+ 	 <param name="point_topic" type="string" value="gps_point"/> 
+ 	 <param name="stopWhileNondt" value="false"/>
+  </node -->
+
+  <node pkg="localization" type="fusion" name="fusion" output="screen" respawn="true">
+  	 <param name="initialPubGate" value="$(arg initialPubGate)"/>
+  </node>
+
+</launch>

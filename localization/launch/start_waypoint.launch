@@ -1,0 +1,23 @@
+<launch> 
+
+  <node pkg="localization" type="gps_pub" name="gps_pub" output="screen">
+ 	 <param name="port" type="string" value="/dev/ttyS0"/> 
+  </node>
+
+  <!-- 
+  <node pkg="localization" type="waypoint_record" name="waypoint_record" output="screen">
+  	 <param name="longitude" value="118.5668725"/>
+ 	 <param name="latitude" value="24.97049781"/>
+  </node>
+  -->
+  <!--
+  <node pkg="localization" type="nmea2tfpose" name="nmea2tfpose" output="screen">
+  	 <param name="longitude" value="118.5668767"/>
+ 	 <param name="latitude" value="24.97049281"/>
+  </node>
+  -->
+  <node pkg="waypoint" type="waypoint_rec" name="waypoint_record" output="screen">
+  	 <param name="gap" value="1.0"/>
+  </node>
+</launch>
+

@@ -1,0 +1,7 @@
+<launch>
+  
+  <node pkg="merge_points" name="merge_points_node" type="merge_points_node" output="screen">
+    <param name="loop_rate" value="10.0" />
+  </node> 
+
+</launch>

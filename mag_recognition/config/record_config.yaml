@@ -1,0 +1,8 @@
+SubLaserTopic: points_raw
+SubPoseTopic: ndt_pose
+SubMagTopic: hinson_640n/magnetic_data  
+UseDefaultPath: true  #workpath/record_data/
+RecordLaserPath: /home/nav/Downloads/LOAM/MagInfo/     #filename:  mag_laser_1.pcd ....
+RecordMagInfoPath: /home/nav/Downloads/LOAM/MagInfo/   #filename:  mag_pose.txt
+
+

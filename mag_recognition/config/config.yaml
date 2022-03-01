@@ -1,0 +1,8 @@
+SubLaserTopic: points_raw
+PubMagPoseTopic: recognition_pose
+RecognMethod: ScanContext    # M2DP
+UseDefaultPath: true   # workpath/data/MagInfo/
+LaserFilePath: /home/nav/Downloads/LOAM/MagInfo/     #filename:  mag_laser_1.pcd ....
+MagPoseFilePath: /home/nav/Downloads/LOAM/MagInfo/   #filename:  mag_pose.txt
+CorrectPose: false
+

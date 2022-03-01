@@ -1,0 +1,60 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/nav/catkin_ws_gs/devel/include/**",
+        "/home/nav/carto_ws/install_isolated/include/**",
+        "/home/nav/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/nav/shenlan_ws/devel/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/amcl/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/base_local_planner/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/carrot_planner/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/clear_costmap_recovery/include/**",
+        "/home/nav/catkin_ws/src/collaborative_robot_controller/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/costmap_2d/include/**",
+        "/home/nav/catkin_ws/src/depth_obstacle_layer/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/dwa_local_planner/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/global_planner/include/**",
+        "/home/nav/catkin_ws/src/humanpose_tracking/include/**",
+        "/home/nav/catkin_ws/src/laser_add_sonar/include/**",
+        "/home/nav/catkin_ws/src/log4cpp_log/include/**",
+        "/home/nav/catkin_ws/src/logistics_server/include/**",
+        "/home/nav/catkin_ws/src/lslidar_n301_decoder/include/**",
+        "/home/nav/catkin_ws/src/lslidar_n301_driver/include/**",
+        "/home/nav/catkin_ws/src/manipulator_client/include/**",
+        "/home/nav/catkin_ws/src/map_server/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/move_base/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/move_slow_and_clear/include/**",
+        "/home/nav/catkin_ws/src/music_player/include/**",
+        "/home/nav/catkin_ws/src/nav_change_system/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/nav_core/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/navfn/include/**",
+        "/home/nav/catkin_ws/src/odom2tf/include/**",
+        "/home/nav/catkin_ws_gs/src/pickup_sound/include/**",
+        "/home/nav/catkin_ws/src/pos_log/include/**",
+        "/home/nav/catkin_ws/src/realsense2_camera/include/**",
+        "/home/nav/catkin_ws/src/realsense_test/include/**",
+        "/home/nav/catkin_ws/src/refresh_load_pbstream/include/**",
+        "/home/nav/catkin_ws/src/robot_state_manager/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/rotate_recovery/include/**",
+        "/home/nav/catkin_ws/src/savvy/include/**",
+        "/home/nav/catkin_ws/src/scan_laser/include/**",
+        "/home/nav/catkin_ws/src/sonar_obstacle_layer/include/**",
+        "/home/nav/catkin_ws/src/task_chain/include/**",
+        "/home/nav/catkin_ws/src/tcp_server/include/**",
+        "/home/nav/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/home/nav/catkin_ws_gs/src/turtlebot_apps/turtlebot_actions/include/**",
+        "/home/nav/catkin_ws/src/uwb_driver/include/**",
+        "/home/nav/catkin_ws/src/navigation-melodic-devel/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

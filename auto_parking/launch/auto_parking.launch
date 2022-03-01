@@ -1,0 +1,13 @@
+<launch>
+  <arg name="localization_topic" default="ndt_pose" />
+  <arg name="laser_topic" default="points_raw" />
+  
+  <node pkg="auto_parking" type="auto_parking_node" name="auto_parking_node" output="screen">
+    <param name="localization_topic" value="$(arg localization_topic)" />
+  </node>
+
+  <node pkg="auto_parking" type="laser_obstacle_node" name="laser_obstacle_node" output="screen">
+    <param name="laser_topic" value="$(arg laser_topic)" />
+  </node >
+
+</launch>

@@ -1,0 +1,11 @@
+max_radius: 60
+max_theta: 360
+num_rings: 40  #从里到外有多少环
+num_sectors: 360 #360度分为多少个扇区  rings*sectors就是一个sc图像的大小 如果data多且cpu占用过高的话就减小这俩值
+  
+indexing_interval: 1
+min_key_frame_seq_distance: 0
+num_candidates: 5
+fast_alignment_search_ratio: 1
+scan_context_distance_thresh: 0.1  #越小越精确
+

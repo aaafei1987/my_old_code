@@ -1,0 +1,4 @@
+laser_crop_dis: 1.0 #这个范围以内的激光点不算障碍
+max_obstacle_dis: 3.0
+angle_interval: [[-3.14, -2.71], [2.71, 3.14]] #角度选择区间，[-PI,PI]
+select_ring: [8,9,10]

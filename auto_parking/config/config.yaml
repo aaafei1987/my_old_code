@@ -1,0 +1,15 @@
+min_corner_r: 2.1 
+begin_line_distance: 1.0
+lookahead_min_distance: 1.2 #carlike should near or over wheelbase, diff car can small(near 0.5)
+lookahead_max_distance: 4.0
+overshoot_line: 1.5 #must bigger than lookahead_min_distance , and smaller than lookahead_max_distance
+line_vel: 0.2
+limit_min_angular_vel: 0.01
+limit_max_angular_vel: 0.2
+tolarte_ori: 0.52
+min_trunning_radius: 2.0
+start_dis_thread: 2.0
+distance_to_goal: 0.05  #实际到达终点的精度要求
+distance_slow_to_goal: 0.5  #要到达终点时降速 距离值
+vel_to_goal: 0.2 #要到达终点时降速 速度值
+

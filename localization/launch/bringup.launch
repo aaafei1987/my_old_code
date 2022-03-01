@@ -1,0 +1,38 @@
+<launch> 
+  <arg name="gnss_x" default="-0.0805839300156" />
+  <arg name="gnss_y" default="-0.281217873096" />
+  <arg name="gnss_yaw" default="-2.443" />
+  <arg name="longitude" default="117.97792698" />
+  <arg name="latitude" default="24.59289720" />
+
+  <node pkg="tf" type="static_transform_publisher" name="map_to_gnss" args="$(arg gnss_x) $(arg gnss_y) 0.0 $(arg gnss_yaw) 0 0 /map /gnss 10" />
+  <node pkg="tf" type="static_transform_publisher" name="baselink_to_imu" args="0.0 0.0 0.458 0 0 0 /base_link /imu 10" />
+  
+  <node pkg="localization" type="gps_pub" name="gps_pub" output="screen">
+ 	 <param name="port" type="string" value="/dev/ttyS0"/> 
+  </node>
+  
+  <!-- node pkg="localization" type="ekf_imu.py" name="ekf_imu" output="screen">
+ 	 <param name="imu_freq" value="50"/> 
+ 	 <param name="pose_topic" type="string" value="ndt_pose"/> 
+ 	 <param name="use_imu_setup" type="bool" value="true"/> 
+ 	 <param name="imu_noise" value="0.01"/> 
+  </node -->
+
+  <node pkg="localization" type="ekf_finalpose.py" name="ekf_final" output="screen">
+ 	 <param name="gnss_tran_noise" value="1.0"/> 
+ 	 <param name="gnss_rot_noise" value="0.01"/> 
+ 	 <param name="rot_tolerance" value="0.15"/> 
+  </node>
+
+
+
+  <node pkg="localization" type="nmea2tfpose" name="nmea2tfpose" output="screen">
+  	 <param name="longitude" value="$(arg longitude)"/>
+ 	 <param name="latitude" value="$(arg latitude)"/>
+ 	 <param name="useGPSInImu" value="false"/>
+ 	 <param name="pose_topic" type="string" value="ndt_pose"/> 
+ 	 <param name="stopWhileNondt" value="true"/>
+  </node>
+
+</launch>
